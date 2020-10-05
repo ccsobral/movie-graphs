@@ -29,3 +29,5 @@ echo 'Edited ratings.tsv'
 echo 'Creating sqlite database...'
 python create_sqlitedb.py
 echo 'Successfully set up moviegraphs.db'
+
+rm -f ./data/*tsv*

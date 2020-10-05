@@ -1,4 +1,9 @@
+*~
 venv/
 data/
+**/.vscode
 **/*.db
 **/*.ipynb
+**/node_modules
+**/__pycache__
+Autobar.js

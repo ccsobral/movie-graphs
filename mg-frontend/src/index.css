@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #aaa;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#root, .App {
+    height: 100vh;
+    width: 100vw;
+}
+
+.App {
+    display: grid;
+    grid-template-rows: minmax(100px, 10%) 1fr auto;
+}
+
+header {
+    background: #005180;
+    display: grid;
+    grid-template-columns: minmax(20%, 200px) 1fr;
+}
+
+.Title {
+    color: #aaa;
+    grid-column: 1 / span 1;
+    display: grid;
+    grid-template-areas: 
+        "m m ."
+        ". g g";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0;
+}
+.Title1 {
+    text-align: center;
+    margin-top: 10px;
+    grid-area: m;
+}
+.Title2 {
+    grid-area: g;
+}
+
+footer {
+    background: #e69d00;
+    color: #000;
+}
+
+.Body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
