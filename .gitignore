@@ -6,4 +6,3 @@ data/
 **/*.ipynb
 **/node_modules
 **/__pycache__
-Autobar.js

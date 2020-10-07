@@ -28,7 +28,7 @@ h1 {
 header {
     background: #005180;
     display: grid;
-    grid-template-columns: minmax(20%, 200px) 1fr;
+    grid-template-columns: minmax(20%, 200px) 1fr minmax(25%, 400px);
 }
 
 .Title {
@@ -49,6 +49,14 @@ header {
 }
 .Title2 {
     grid-area: g;
+}
+
+.SearchBar {
+    display: flex;
+    grid-column: 3;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
 }
 
 footer {

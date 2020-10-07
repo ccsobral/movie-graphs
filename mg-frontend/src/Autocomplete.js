@@ -11,7 +11,7 @@ const renderSuggestion = suggestion => (
     </div>
 )
 
-export default function Autocomplete() {
+export default function Autocomplete({setTitle}) {
     const [value, setValue] = useState('')
     const [suggestions, setSuggestions] = useState([])
 
@@ -35,6 +35,10 @@ export default function Autocomplete() {
         setSuggestions([])
     }
 
+    const onSuggestionSelected = (e, {suggestion}) => {
+        setTitle(suggestion.title)
+    }
+
     const inputProps = {
         placeholder: 'Search dataset',
         value,
@@ -46,6 +50,7 @@ export default function Autocomplete() {
             suggestions={suggestions}
             onSuggestionsFetchRequested={onSuggestionsFetchRequested}
             onSuggestionsClearRequested={onSuggestionsClearRequested}
+            onSuggestionSelected={onSuggestionSelected}
             getSuggestionValue={getSuggestionValue}
             renderSuggestion={renderSuggestion}
             inputProps={inputProps}
